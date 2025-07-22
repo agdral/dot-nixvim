@@ -1,10 +1,4 @@
 {
-  colorschemes = {
-    catppuccin = {
-      enable = true;
-      settings.flavour = "mocha";
-    };
-  };
   plugins = {
     treesitter = {
       enable = true;

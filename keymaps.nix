@@ -1,8 +1,4 @@
 {
-  globals = {
-    mapleader = " ";
-    maplocalleader = ";";
-  };
   keymaps = [
     {
       mode = "n";
