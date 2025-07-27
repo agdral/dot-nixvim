@@ -2,9 +2,7 @@
   programs.nixvim = {
     enable = true;
     imports = [
-      ./config.nix
-      ./keymaps.nix
-      ./colorschema.nix
+      ./general
       ./lsp
       ./plugins
     ];
