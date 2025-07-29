@@ -1,6 +1,10 @@
 {
   plugins.telescope = {
     enable = true;
+    extensions = {
+      file-browser.enable = true;
+      project.enable = true;
+    };
     settings.defaults = {
       file_ignore_patterns = [
         "^.git/"

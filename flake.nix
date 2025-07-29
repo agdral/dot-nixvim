@@ -16,6 +16,5 @@
     };
   in {
     nixosModules.default = import ./default.nix;
-    packages.${system}.default = pkgs.writeText "dummy" "Nixvim Config: only módules";
   };
 }
