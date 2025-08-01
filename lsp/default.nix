@@ -2,7 +2,6 @@
   imports = [
     ./trouble.nix
     ./servers
-    ./none_ls.nix
     ./cmp.nix
   ];
 
