@@ -2,7 +2,7 @@
   plugins.lsp = {
     enable = true;
   };
-  import = [
+  imports = [
     ./web.nix
     ./programs.nix
     ./shells.nix
