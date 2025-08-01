@@ -17,7 +17,6 @@
           {name = "luasnip";}
           {name = "buffer";}
           {name = "dap";}
-          {name = "neorg";}
           {name = "vsnip";}
         ];
         mapping = {
