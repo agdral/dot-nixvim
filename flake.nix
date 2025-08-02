@@ -1,20 +1,16 @@
 {
-  description = "Nixvim Config";
+  description = "Dotfile Default";
 
-  inputs = {
-    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
-  };
-
-  outputs = {
-    self,
-    nixpkgs,
-    ...
-  }: let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      system = system;
+  outputs = {...}: {
+    nixosModules.default = {...}: {
+      programs.nixvim = {
+        enable = true;
+        imports = [
+          ./general
+          ./lsp
+          ./plugins
+        ];
+      };
     };
-  in {
-    nixosModules.default = import ./default.nix;
   };
 }
