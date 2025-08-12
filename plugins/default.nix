@@ -4,6 +4,7 @@
     ./git.nix
     ./telescope.nix
     ./barbar.nix
+    ./codeCompanion.nix
   ];
   plugins = {
     dap.enable = true;
