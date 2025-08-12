@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       adapters = {
-        ollama = {
+        deepseek = {
           __raw = ''
             function()
               return require('codecompanion.adapters').extend('deepseek', {
@@ -31,6 +31,9 @@
           adapter = "deepseek";
         };
         inline = {
+          adapter = "deepseek";
+        };
+        cmd = {
           adapter = "deepseek";
         };
       };
