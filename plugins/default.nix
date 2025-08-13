@@ -23,6 +23,5 @@
     lastplace.enable = true;
     vim-suda.enable = true;
     render-markdown.enable = true;
-    obsidian.enable = true;
   };
 }
