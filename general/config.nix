@@ -26,20 +26,14 @@
     splitbelow = true;
     splitright = true;
 
-    # Enable mouse mode
-    mouse = "a"; # Mouse
-
     # Enable ignorecase + smartcase for better searching
     ignorecase = true;
-    smartcase = true; # Don't ignore case with capitals
+    smartcase = true; 
     grepprg = "rg --vimgrep";
     grepformat = "%f:%l:%c:%m";
 
     # Decrease updatetime
-    updatetime = 100; # faster completion (4000ms default)
-
-    # Set completeopt to have a better completion experience
-    completeopt = ["menuone" "noselect" "noinsert"]; # mostly just for cmp
+    updatetime = 200; # faster completion (4000ms default)
 
     # Enable persistent undo history
     swapfile = false;
@@ -50,7 +44,7 @@
     termguicolors = true;
 
     # Enable cursor line highlight
-    cursorline = true; # Highlight the line where the cursor is located
+    cursorline = true; 
 
     # Set fold settings
     foldcolumn = "0";
@@ -58,30 +52,11 @@
     foldlevelstart = 99;
     foldenable = true;
 
-    # Always keep 8 lines above/below cursor unless at start/end of file
-    scrolloff = 8;
-
     # Reduce which-key timeout to 10ms
     timeoutlen = 10;
 
     # Set encoding type
     encoding = "utf-8";
     fileencoding = "utf-8";
-
-    # More space in the neovim command line for displaying messages
-    cmdheight = 0;
-
-    # We don't need to see things like INSERT anymore
-    showmode = false;
-  };
-
-  clipboard = {
-    register = "unnamedplus";
-    providers.wl-copy.enable = true;
-  };
-
-  globals = {
-    mapleader = " ";
-    maplocalleader = ";";
   };
 }

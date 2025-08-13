@@ -6,7 +6,6 @@
   ];
 
   plugins = {
-    friendly-snippets.enable = true;
     luasnip = {
       enable = true;
       settings = {
@@ -25,7 +24,6 @@
       sources = {
         completion = {
           luasnip.enable = true;
-          vsnip.enable = true;
         };
       };
     };

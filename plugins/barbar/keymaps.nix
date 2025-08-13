@@ -1,13 +1,4 @@
 {
-  plugins = {
-    barbar = {
-      enable = true;
-      settings = {
-        maximumPadding = 1;
-        maximumLength = 20;
-      };
-    };
-  };
   keymaps = [
     {
       mode = "n";

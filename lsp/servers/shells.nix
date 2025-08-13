@@ -1,7 +1,5 @@
 {
   plugins = {
-    # quarto.enable = true;
-
     lsp.servers = {
       # Nushell
       nushell.enable = true;
