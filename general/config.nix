@@ -58,5 +58,8 @@
     # Set encoding type
     encoding = "utf-8";
     fileencoding = "utf-8";
+    
+    # hide modes 
+    showmode = false;
   };
 }
