@@ -60,6 +60,7 @@
     fileencoding = "utf-8";
     
     # hide modes 
+    cmdheight = 0;
     showmode = false;
   };
 }
