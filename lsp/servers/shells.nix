@@ -22,7 +22,7 @@
       # Lua
       lua_ls.enable = true;
       # Markdown
-      # marksman.enable = true;
+      marksman.enable = true;
       # Sql
       sqls.enable = true;
       # Postgres
