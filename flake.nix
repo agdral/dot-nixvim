@@ -7,9 +7,9 @@
         enable = true;
         imports = [
           ./general
+          ./ui
           ./lsp
           ./plugins
-          ./ui
         ];
       };
     };
