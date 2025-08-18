@@ -1,4 +1,8 @@
 {
+  imports = [
+    ./keymaps.nix
+  ];
+
   plugins.codecompanion = {
     enable = true;
     settings = {
@@ -22,6 +26,9 @@
             end
           '';
         };
+      };
+      opts = {
+        language = "Spanish";
       };
       strategies = {
         agent = {

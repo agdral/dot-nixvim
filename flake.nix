@@ -9,6 +9,7 @@
           ./general
           ./lsp
           ./plugins
+          ./ui
         ];
       };
     };
