@@ -13,12 +13,6 @@
     }
     {
       mode = "n";
-      key = "<leader>gn";
-      action = "<cmd>Neogit<CR>";
-      options.desc = "Git Neo";
-    }
-    {
-      mode = "n";
       key = "<leader>gr";
       action = "<cmd>lua require('gitsigns').refresh()<CR>";
       options.desc = "Git Refresh";
