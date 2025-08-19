@@ -1,4 +1,8 @@
 {
+  imports = [
+    ./keymaps.nix
+  ];
+
   plugins.neo-tree = {
     enable = true;
     enableDiagnostics = true;

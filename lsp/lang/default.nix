@@ -16,6 +16,7 @@
     ./rust
     ./solidity
     ./swift
+    ./astro
   ];
 }
 

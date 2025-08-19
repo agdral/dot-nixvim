@@ -3,18 +3,21 @@
     ./ansible
     ./bash
     ./cmake
+    ./css
     ./docker
     ./fish
+    ./html
+    ./htmx
+    ./json
     ./just
     ./latex
     ./markdown
     ./mathLab
     ./nushell
-    ./postgres
-    ./sql
     ./systemd
+    ./toml
     ./typst
-    ./vectorCode
+    ./yaml
   ];
 }
 

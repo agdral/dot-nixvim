@@ -1,7 +1,9 @@
 {
   imports = [
     ./config.nix
-    ./keymaps.nix
     ./sets.nix
+
+    ./keymaps/general.nix
+    ./keymaps/windows.nix
   ];
 }
