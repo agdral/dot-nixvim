@@ -13,6 +13,12 @@
     }
     {
       mode = "n";
+      key = "<leader>ch";
+      action = "<cmd>CodeCompanionChat<CR>";
+      options.desc = "Open Chat";
+    }
+    {
+      mode = "n";
       key = "<leader>cl";
       action = "<cmd>'<,'>CodeCompanion /lsp<CR>";
       options.desc = "Explain LSP Diagnostic";
