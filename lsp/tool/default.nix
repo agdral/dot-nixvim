@@ -4,7 +4,6 @@
     ./postgres
     ./sql
     ./tailwindcss
-    ./vectorCode
   ];
 }
 

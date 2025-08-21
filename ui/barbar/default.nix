@@ -2,7 +2,7 @@
   imports = [
     ./keymaps.nix
   ];
-
+  
   plugins = {
     barbar = {
       enable = true;
