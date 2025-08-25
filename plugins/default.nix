@@ -5,7 +5,6 @@
     ./git
     ./oil
     ./trouble
-    ./cmp
     ./luasnip
     ./noneLs
     ./minuet 
@@ -17,5 +16,7 @@
     nvim-autopairs.enable = true;
     lastplace.enable = true;
     vim-suda.enable = true; 
+    blink-cmp.enable = true; 
+
   };
 }
