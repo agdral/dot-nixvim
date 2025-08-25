@@ -8,8 +8,7 @@
     ./cmp
     ./luasnip
     ./noneLs
-    ./minuet
-    
+    ./minuet 
   ];
   plugins = {
     fidget.enable = true;
@@ -17,6 +16,6 @@
     comment.enable = true;
     nvim-autopairs.enable = true;
     lastplace.enable = true;
-    vim-suda.enable = true;
+    vim-suda.enable = true; 
   };
 }

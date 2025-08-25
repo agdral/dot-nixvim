@@ -3,9 +3,9 @@
     minuet = {
       enable = true;
       settings = {
-        provider = "deepseek";
+        provider = "openai_fim_compatible";
         provider_options = {
-          openai_compatible = {
+          openai_fim_compatible = {
             model = "deepseek-chat";
             api_key = "DEEPSEEK_API_KEY";
             end_point = "https://api.deepseek.com/beta/completions";
@@ -14,7 +14,7 @@
               stop = null;
               max_tokens = null;
             };
-            stream = true;
+            stream = true; 
           };
         };
       };
