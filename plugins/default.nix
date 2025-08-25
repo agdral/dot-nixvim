@@ -9,6 +9,7 @@
     ./luasnip
     ./noneLs
     ./minuet
+    
   ];
   plugins = {
     fidget.enable = true;
