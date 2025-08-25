@@ -3,19 +3,15 @@
     minuet = {
       enable = true;
       settings = {
-        provider = "openai_fim_compatible";
+        provider = "openai_compatible";
         provider_options = {
-          openai_fim_compatible = {
-            model = "deepseek-chat";
-            api_key = {
-              __raw = "vim.env.DEEPSEEK_API_KEY";
-            };
-            end_point = "https://api.deepseek.com/beta/completions";
-            name = "Deepseek";
-            stream = true;
+          openai_compatible = {
+            end_point = "https://api.deepseek.com/chat/completions";
+            api_key = "DEEPSEEK_API_KEY";
+            name = "deepseek";
             optional = {
-              stop = null;
-              max_tokens = null;
+              max_tokens = 256;
+              top_p = 0.9;
             };
           };
         };
