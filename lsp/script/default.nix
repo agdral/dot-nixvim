@@ -14,7 +14,7 @@
     ./markdown
     ./mathLab
     ./nushell
-    ./systemd
+    # ./systemd
     ./toml
     ./typst
     ./yaml

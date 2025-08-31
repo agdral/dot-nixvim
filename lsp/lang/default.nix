@@ -12,7 +12,7 @@
     ./kotlin
     ./lua
     ./nix
-    # ./python
+    ./python
     ./rust
     ./solidity
     ./swift
