@@ -3,7 +3,9 @@
     render-markdown = {
       enable = true;
       luaConfig.post = ''
-        file_types = { 'markdown', 'codecompanion' },
+        require('render-markdown').setup({
+          file_types = { 'markdown', 'codecompanion' },
+        })
       '';
     };
   };
