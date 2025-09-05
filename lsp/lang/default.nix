@@ -1,22 +1,8 @@
-{
-  imports = [
-    ./arduino
-    ./asembly
-    ./cSharp
-    ./cPlus
-    ./dart
-    ./go
-    ./godot
-    ./java
-    ./javascript
-    ./kotlin
-    ./lua
-    ./nix
-    ./python
-    ./rust
-    ./solidity
-    ./swift
-    ./astro
+{...}: let
+  utils = import ../../utils.nix;
+  folderImports = utils.importFoldersExcept ./. [
+    "vectorCode"
   ];
+in {
+  imports = folderImports;
 }
-

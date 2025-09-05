@@ -1,17 +1,9 @@
-{
-  imports = [
-    ./barbar
-    ./lualine
-    ./neotree
-    ./notify
-    ./telescope
-    ./toggleterm
-    ./colorizer
-    ./treesitter
-    ./webDevicons
-    ./renderMarkdown
-  ];
-
+{...}: let
+  utils = import ../../utils.nix;
+  folderImports =
+    utils.importFoldersExcept ./. [];
+in {
+  imports = folderImports;
   plugins = {
     illuminate.enable = true;
     which-key.enable = true;

@@ -6,7 +6,7 @@
   plugins.codecompanion = {
     enable = true;
     settings = {
-      adapters = {
+      http.adapters = {
         deepseek = {
           __raw = ''
             function()
@@ -27,7 +27,7 @@
           '';
         };
       };
-      opts = {
+      http.opts = {
         language = "Spanish";
       };
       strategies = {
