@@ -33,15 +33,19 @@
       strategies = {
         agent = {
           adapter = "deepseek";
+          model = "deepseek-chat";
         };
         chat = {
           adapter = "deepseek";
+          model = "deepseek-chat";
         };
         inline = {
           adapter = "deepseek";
+          model = "deepseek-chat";
         };
         cmd = {
           adapter = "deepseek";
+          model = "deepseek-chat";
         };
       };
     };
