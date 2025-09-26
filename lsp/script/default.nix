@@ -1,7 +1,9 @@
 {...}: let
   utils = import ../../utils.nix;
   folderImports =
-    utils.importFoldersExcept ./. [];
+    utils.importFoldersExcept ./. [
+      "ansible"
+    ];
 in {
   imports = folderImports;
 }
