@@ -5,14 +5,14 @@
 
   plugins.neo-tree = {
     enable = true;
-    enableDiagnostics = true;
-    enableGitStatus = true;
-    enableModifiedMarkers = true;
-    enableRefreshOnWrite = true;
-    hideRootNode = true;
-    closeIfLastWindow = true;
-    popupBorderStyle = "rounded";
     settings = {
+      enableDiagnostics = true;
+      closeIfLastWindow = true;
+      enableGitStatus = true;
+      enableModifiedMarkers = true;
+      enableRefreshOnWrite = true;
+      hideRootNode = true;
+      popupBorderStyle = "rounded";
       buffers = {
         bindToCwd = false;
         followCurrentFile = {
