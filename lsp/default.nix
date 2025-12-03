@@ -4,6 +4,7 @@
     utils.importFoldersExcept ./. [];
 in {
   imports = folderImports;
+
   plugins = {
     lsp.enable = true;
     lsp-format.enable = true;
