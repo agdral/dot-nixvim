@@ -4,7 +4,7 @@
       enable = true;
       enableLspFormat = true;
       settings = {
-        updateInInsert = false;
+        update_in_insert = false;
       };
       sources = {
         completion = {

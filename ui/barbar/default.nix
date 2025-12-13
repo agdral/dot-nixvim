@@ -7,8 +7,8 @@
     barbar = {
       enable = true;
       settings = {
-        maximumPadding = 1;
-        maximumLength = 20;
+        maximum_padding = 1;
+        maximum_length = 20;
       };
     };
   };
