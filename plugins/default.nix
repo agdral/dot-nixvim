@@ -1,17 +1,28 @@
-{...}: let
-  utils = import ../utils.nix;
-  folderImports = utils.importFoldersExcept ./. [
-    "vectorCode"
-    "blink"
-  ];
+{
+  lib,
+  tools,
+  ...
+}: 
+with lib; let
+  mkBoolOption = desc:
+    mkOption {
+      type = types.bool;
+      default = false;
+      description = desc;
+    };
 in {
-  imports = folderImports;
-  plugins = {
-    fidget.enable = true;
-    dap.enable = true;
-    comment.enable = true;
-    nvim-autopairs.enable = true;
-    lastplace.enable = true;
-    vim-suda.enable = true;
+  imports = tools.importFoldersExcept ./. [];
+  options.nvim_plugins = {
+    apps = mkBoolOption "Enable apps default";
+    autoSave = mkBoolOption "Enable autoSave";
+    cmp = mkBoolOption "Enable cmp";
+    codeCompanion = mkBoolOption "Enable codeCompanion";
+    git = mkBoolOption "Enable git";
+    luasnip = mkBoolOption "Enable luasnip";
+    minuet = mkBoolOption "Enable minuet";
+    noneLs = mkBoolOption "Enable noneLs";
+    oil = mkBoolOption "Enable oil";
+    trouble = mkBoolOption "Enable trouble";
+    ventorCode = mkBoolOption "Enable ventorCode";
   };
 }
