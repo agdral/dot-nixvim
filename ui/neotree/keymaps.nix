@@ -1,11 +1,8 @@
-{
-  keymaps = [
-    {
-      mode = "n";
-      key = "h";
-      action = "<cmd>Neotree toggle<CR>";
-      options.desc = "Toggle Neo Tree";
-    }
-  ];
-}
-
+[
+  {
+    mode = "n";
+    key = "h";
+    action = "<cmd>Neotree toggle<CR>";
+    options.desc = "Toggle Neo Tree";
+  }
+]
