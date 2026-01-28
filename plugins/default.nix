@@ -22,6 +22,6 @@ in {
     noneLs = mkBoolOption "Enable noneLs";
     oil = mkBoolOption "Enable oil";
     trouble = mkBoolOption "Enable trouble";
-    ventorCode = mkBoolOption "Enable ventorCode";
+    vectorCode = mkBoolOption "Enable ventorCode";
   };
 }
