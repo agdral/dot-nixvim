@@ -5,13 +5,13 @@ let
   notInList = list: item: !(builtins.elem item list);
 in {
   importFoldersExcept = path: excludedFolders:
-    builtins.map (name: path + "/${name}")
+    map (name: path + "/${name}")
     (builtins.filter (name:
       isDirectory path name && notInList excludedFolders name)
     (builtins.attrNames (builtins.readDir path)));
 
   importNixFiles = path: excludedFiles:
-    builtins.map (name: path + "/${name}")
+    map (name: path + "/${name}")
     (builtins.filter (name:
       isRegularFile path name
       && isNixFile name
@@ -23,7 +23,7 @@ in {
       acc: file:
         acc ++ (import file)
     ) [] (
-      builtins.map (name: path + "/${name}") (
+      map (name: path + "/${name}") (
         builtins.filter (
           name: let
             entry = (builtins.readDir path).${name};

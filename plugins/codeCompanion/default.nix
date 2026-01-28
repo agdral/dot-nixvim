@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 with lib; let
@@ -12,6 +13,7 @@ in {
 
     plugins.codecompanion = {
       enable = true;
+      package = pkgs.vimPlugins.codecompanion-nvim;
       settings = {
         http.adapters = {
           deepseek = {
