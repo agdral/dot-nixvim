@@ -1,8 +1,4 @@
-{
-  lib,
-  tools,
-  ...
-}: 
+{lib, ...}:
 with lib; let
   mkBoolOption = desc:
     mkOption {
@@ -10,8 +6,11 @@ with lib; let
       default = false;
       description = desc;
     };
+
+  utils = import ../utils.nix;
 in {
-  imports = tools.importFoldersExcept ./. [];
+  imports = utils.importFoldersExcept ./. [];
+
   options.nvim_plugins = {
     apps = mkBoolOption "Enable apps default";
     autoSave = mkBoolOption "Enable autoSave";
