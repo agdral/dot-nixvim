@@ -14,7 +14,6 @@ in {
       nvim-autopairs.enable = true;
       lastplace.enable = true;
       vim-suda.enable = true;
-      blink-cmp.enable = true;
     };
   };
 }
