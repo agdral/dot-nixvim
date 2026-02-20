@@ -1,8 +1,10 @@
 {import-tree, ...}: {
-  imports = [
-    ./config.nix
-    ./sets.nix
+  program.nixvim = {
+    imports = [
+      ./config.nix
+      ./sets.nix
 
-    (import-tree ./keymaps)
-  ];
+      (import-tree ./keymaps)
+    ];
+  };
 }
