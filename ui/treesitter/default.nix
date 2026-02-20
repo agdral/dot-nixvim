@@ -6,8 +6,12 @@
 with lib; let
   cfg = config.nvim_ui;
 in {
+  options.nvim_ui.treesitter = mkOption {
+    type = types.bool;
+    default = false;
+  };
   config = mkIf cfg.treesitter {
-    plugins = {
+    programs.nixvim.plugins = {
       treesitter = {
         enable = true;
         folding.enable = true;

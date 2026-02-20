@@ -6,8 +6,12 @@
 with lib; let
   cfg = config.nvim_plugins;
 in {
+  options.nvim_plugins.cmp = mkOption {
+    type = types.bool;
+    default = false;
+  };
   config = mkIf cfg.cmp {
-    plugins = {
+    programs.nixvim.plugins = {
       cmp-buffer.enable = true;
       cmp-path.enable = true;
       cmp-dap.enable = true;

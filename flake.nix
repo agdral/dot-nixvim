@@ -1,10 +1,21 @@
 {
   description = "Dotfile Default";
 
-  outputs = {...}: {
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    import-tree.url = "github:vic/import-tree";
+  };
+
+  outputs = {
+    nixpkgs,
+    import-tree,
+    ...
+  }: let
+    lib = nixpkgs.lib;
+  in {
     nixosModules.general = ./general;
-    nixosModules.ui = ./ui;
     nixosModules.lsp = ./lsp;
-    nixosModules.plugins = ./plugins;
+    nixosModules.plugins = import-tree.filter (lib.hasSuffix "/default.nix") ./plugins;
+    nixosModules.ui = import-tree.filter (lib.hasSuffix "/default.nix") ./ui;
   };
 }

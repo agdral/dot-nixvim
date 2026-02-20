@@ -8,10 +8,14 @@ with lib; let
   cfg = config.nvim_plugins;
   keymapsF = import ./keymaps.nix;
 in {
+  options.nvim_plugins.codeCompanion = mkOption {
+    type = types.bool;
+    default = false;
+  };
   config = mkIf cfg.codeCompanion {
-    keymaps = keymapsF;
+    programs.nixvim.keymaps = keymapsF;
 
-    plugins.codecompanion = {
+    programs.nixvim.plugins.codecompanion = {
       enable = true;
       settings = {
         http.adapters = {

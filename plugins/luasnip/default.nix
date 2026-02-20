@@ -6,8 +6,12 @@
 with lib; let
   cfg = config.nvim_plugins;
 in {
+  options.nvim_plugins.luasnip = mkOption {
+    type = types.bool;
+    default = false;
+  };
   config = mkIf cfg.luasnip {
-    plugins = {
+    programs.nixvim.plugins = {
       luasnip = {
         enable = true;
         settings = {

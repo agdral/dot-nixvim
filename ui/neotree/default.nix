@@ -7,10 +7,14 @@ with lib; let
   cfg = config.nvim_ui;
   keymapsF = import ./keymaps.nix;
 in {
+  options.nvim_ui.neotree = mkOption {
+    type = types.bool;
+    default = false;
+  };
   config = mkIf cfg.neotree {
-    keymaps = keymapsF;
+    programs.nixvim.keymaps = keymapsF;
 
-    plugins.neo-tree = {
+    programs.nixvim.plugins.neo-tree = {
       enable = true;
       settings = {
         enable_diagnostics = true;

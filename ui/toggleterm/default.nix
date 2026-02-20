@@ -6,8 +6,12 @@
 with lib; let
   cfg = config.nvim_ui;
 in {
+  options.nvim_ui.toggleterm = mkOption {
+    type = types.bool;
+    default = false;
+  };
   config = mkIf cfg.toggleterm {
-    plugins = {
+    programs.nixvim.plugins = {
       toggleterm = {
         enable = true;
         settings = {

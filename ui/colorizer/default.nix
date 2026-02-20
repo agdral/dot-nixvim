@@ -6,8 +6,12 @@
 with lib; let
   cfg = config.nvim_ui;
 in {
+  options.nvim_ui.colorizer = mkOption {
+    type = types.bool;
+    default = false;
+  };
   config = mkIf cfg.colorizer {
-    plugins = {
+    programs.nixvim.plugins = {
       colorizer = {
         enable = true;
         settings = {

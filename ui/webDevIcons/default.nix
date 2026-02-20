@@ -6,8 +6,12 @@
 with lib; let
   cfg = config.nvim_ui;
 in {
+  options.nvim_ui.webDevIcons = mkOption {
+    type = types.bool;
+    default = false;
+  };
   config = mkIf cfg.webDevIcons {
-    plugins = {
+    programs.nixvim.plugins = {
       web-devicons = {
         enable = true;
         settings = {

@@ -6,8 +6,12 @@
 with lib; let
   cfg = config.nvim_ui;
 in {
+  options.nvim_ui.renderMarkdown = mkOption {
+    type = types.bool;
+    default = false;
+  };
   config = mkIf cfg.renderMarkdown {
-    plugins = {
+    programs.nixvim.plugins = {
       render-markdown = {
         enable = true;
         luaConfig.post = ''

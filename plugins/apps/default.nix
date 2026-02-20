@@ -6,8 +6,12 @@
 with lib; let
   cfg = config.nvim_plugins;
 in {
+  options.nvim_plugins.apps = mkOption {
+    type = types.bool;
+    default = false;
+  };
   config = mkIf cfg.apps {
-    plugins = {
+    programs.nixvim.plugins = {
       fidget.enable = true;
       dap.enable = true;
       comment.enable = true;

@@ -6,8 +6,12 @@
 with lib; let
   cfg = config.nvim_plugins;
 in {
+  options.nvim_plugins.minuet = mkOption {
+    type = types.bool;
+    default = false;
+  };
   config = mkIf cfg.minuet {
-    plugins = {
+    programs.nixvim.plugins = {
       minuet = {
         enable = true;
         settings = {

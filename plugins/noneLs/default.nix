@@ -6,8 +6,12 @@
 with lib; let
   cfg = config.nvim_plugins;
 in {
+  options.nvim_plugins.noneLs = mkOption {
+    type = types.bool;
+    default = false;
+  };
   config = mkIf cfg.noneLs {
-    plugins = {
+    programs.nixvim.plugins = {
       none-ls = {
         enable = true;
         enableLspFormat = true;
