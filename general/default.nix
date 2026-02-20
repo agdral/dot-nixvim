@@ -3,7 +3,7 @@
   import-tree,
   ...
 }: {
-  program.nixvim = {
+  programs.nixvim = {
     enable = lib.mkDefault true;
     imports = [
       ./config.nix
