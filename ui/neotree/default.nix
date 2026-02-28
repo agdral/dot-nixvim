@@ -46,6 +46,7 @@ in {
             always_show = [
               ".gitignore"
               ".env"
+              ".db.env"
               ".env-example"
               ".ccls"
               ".justfile"
