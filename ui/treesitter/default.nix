@@ -6,10 +6,7 @@
 with lib; let
   cfg = config.nvim_ui;
 in {
-  options.nvim_ui.treesitter = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.nvim_ui.treesitter = mkEnableOption "treesitter";
   config = mkIf cfg.treesitter {
     programs.nixvim.plugins = {
       treesitter = {

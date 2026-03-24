@@ -6,10 +6,7 @@
 with lib; let
   cfg = config.nvim_plugins;
 in {
-  options.nvim_plugins.oil = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.nvim_plugins.oil = mkEnableOption "oil";
   config = mkIf cfg.oil {
     programs.nixvim.plugins = {
       oil = {

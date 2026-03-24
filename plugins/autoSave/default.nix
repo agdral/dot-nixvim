@@ -6,10 +6,7 @@
 with lib; let
   cfg = config.nvim_plugins;
 in {
-  options.nvim_plugins.autoSave = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.nvim_plugins.autoSave = mkEnableOption "autoSave";
   config = mkIf cfg.autoSave {
     programs.nixvim.plugins = {
       auto-save = {

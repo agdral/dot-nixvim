@@ -6,10 +6,7 @@
 with lib; let
   cfg = config.nvim_plugins;
 in {
-  options.nvim_plugins.cmp = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.nvim_plugins.cmp = mkEnableOption "cmp";
   config = mkIf cfg.cmp {
     programs.nixvim.plugins = {
       cmp-buffer.enable = true;

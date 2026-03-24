@@ -6,10 +6,7 @@
 with lib; let
   cfg = config.nvim_ui;
 in {
-  options.nvim_ui.colorizer = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.nvim_ui.colorizer = mkEnableOption "colorizer";
   config = mkIf cfg.colorizer {
     programs.nixvim.plugins = {
       colorizer = {

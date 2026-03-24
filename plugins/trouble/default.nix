@@ -7,10 +7,7 @@ with lib; let
   cfg = config.nvim_plugins;
   keymapsF = import ./keymaps.nix;
 in {
-  options.nvim_plugins.trouble = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.nvim_plugins.trouble = mkEnableOption "trouble";
   config = mkIf cfg.trouble {
     programs.nixvim.keymaps = keymapsF;
 

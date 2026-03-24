@@ -6,10 +6,7 @@
 with lib; let
   cfg = config.nvim_plugins;
 in {
-  options.nvim_plugins.apps = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.nvim_plugins.apps = mkEnableOption "apps";
   config = mkIf cfg.apps {
     programs.nixvim.plugins = {
       fidget.enable = true;

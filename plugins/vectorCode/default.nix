@@ -6,10 +6,7 @@
 with lib; let
   cfg = config.nvim_plugins;
 in {
-  options.nvim_plugins.vectorCode = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.nvim_plugins.vectorCode = mkEnableOption "vectorCode";
   config = mkIf cfg.vectorCode {
     programs.nixvim.plugins = {
       lsp.servers = {

@@ -6,10 +6,7 @@
 with lib; let
   cfg = config.nvim_plugins;
 in {
-  options.nvim_plugins.noneLs = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.nvim_plugins.noneLs = mkEnableOption "noneLs";
   config = mkIf cfg.noneLs {
     programs.nixvim.plugins = {
       none-ls = {

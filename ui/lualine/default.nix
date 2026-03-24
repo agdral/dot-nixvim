@@ -6,10 +6,7 @@
 with lib; let
   cfg = config.nvim_ui;
 in {
-  options.nvim_ui.lualine = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.nvim_ui.lualine = mkEnableOption "lualine";
   config = mkIf cfg.lualine {
     programs.nixvim.plugins = {
       lualine = {

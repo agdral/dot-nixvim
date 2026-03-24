@@ -6,10 +6,7 @@
 with lib; let
   cfg = config.nvim_plugins;
 in {
-  options.nvim_plugins.minuet = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.nvim_plugins.minuet = mkEnableOption "minuet";
   config = mkIf cfg.minuet {
     programs.nixvim.plugins = {
       minuet = {
