@@ -10,7 +10,8 @@
     import-tree.url = "github:vic/import-tree";
   };
 
-  outputs = {
+  outputs = inputs @ {
+    self,
     nixpkgs,
     import-tree,
     nixvim,
@@ -19,6 +20,7 @@
     lib = nixpkgs.lib;
   in {
     nixosModules.default = {
+      _module.args = {inherit import-tree;};
       imports = [
         nixvim.nixosModules.nixvim
         ./general
@@ -26,6 +28,10 @@
         (import-tree.filter (lib.hasSuffix "/default.nix") ./plugins)
         (import-tree.filter (lib.hasSuffix "/default.nix") ./ui)
       ];
+    };
+
+    nixosConfigurations = import _tester/config.nix {
+      inherit self inputs lib;
     };
   };
 }
