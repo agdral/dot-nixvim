@@ -18,14 +18,14 @@
   }: let
     lib = nixpkgs.lib;
   in {
-    nixosModules.general = {
+    nixosModules.default = {
       imports = [
         nixvim.nixosModules.nixvim
         ./general
+        ./lsp
+        (import-tree.filter (lib.hasSuffix "/default.nix") ./plugins)
+        (import-tree.filter (lib.hasSuffix "/default.nix") ./ui)
       ];
     };
-    nixosModules.lsp = ./lsp;
-    nixosModules.plugins = import-tree.filter (lib.hasSuffix "/default.nix") ./plugins;
-    nixosModules.ui = import-tree.filter (lib.hasSuffix "/default.nix") ./ui;
   };
 }
