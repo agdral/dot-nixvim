@@ -1,8 +1,11 @@
 {
   plugins = {
+    lsp.servers = {
+      sqruff.enable = true;
+    };
     vim-dadbod.enable = true;
     none-ls.sources.formatting = {
-      sqlfluff.enable = true;
+      sqruff.enable = true;
     };
   };
 }
