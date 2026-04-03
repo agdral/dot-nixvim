@@ -18,7 +18,7 @@ in {
         };
       };
       treesitter-textobjects.enable = true;
-      ts-context-commentstring.enable = true;
+      # ts-context-commentstring.enable = true;
     };
   };
 }
