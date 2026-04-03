@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   plugins = {
     lsp.servers = {
       biome = {
@@ -10,9 +10,9 @@
     none-ls.sources.formatting = {
       prettier = {
         enable = true;
+        packages = pkgs.prettier;
         disableTsServerFormatter = false;
       };
     };
   };
 }
-

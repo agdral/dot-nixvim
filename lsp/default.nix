@@ -1,12 +1,11 @@
 {
-  lib,
   import-tree,
   ...
 }: {
   programs.nixvim = {
     imports = [
       (import-tree ./lang)
-      (import-tree.filterNot (p: lib.any (s: lib.hasInfix s p) ["/ansible/"]) ./script)
+      (import-tree ./script)
       (import-tree ./tool)
     ];
 
