@@ -7,12 +7,12 @@
       };
     };
 
-    # none-ls.sources.formatting = {
-    #   prettier = {
-    #     enable = true;
-    #     packages = pkgs.prettier;
-    #     disableTsServerFormatter = false;
-    #   };
-    # };
+    none-ls.sources.formatting = {
+      prettier = {
+        enable = true;
+        packages = pkgs.prettier;
+        disableTsServerFormatter = false;
+      };
+    };
   };
 }
