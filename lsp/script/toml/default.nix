@@ -1,11 +1,5 @@
 {
-  plugins = {
-    lsp.servers = {
-      taplo.enable = true;
-    };
-
-    # none-ls.sources.formatting = {
-    # };
+  lsp.servers = {
+    taplo.enable = true;
   };
 }
-

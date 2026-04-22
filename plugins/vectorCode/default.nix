@@ -8,46 +8,47 @@ with lib; let
 in {
   options.nvim_plugins.vectorCode = mkEnableOption "vectorCode";
   config = mkIf cfg.vectorCode {
-    programs.nixvim.plugins = {
+    programs.nixvim = {
       lsp.servers = {
         vectorcode_server.enable = true;
       };
-
-      codecompanion = {
-        luaConfig.post = ''
-          extensions = {
-            vectorcode = {
-              opts = {
-                tool_group = {
-                  enabled = true,
-                  extras = {},
-                  collapse = false,
-                },
-                tool_opts = {
-                  ["*"] = {},
-                  ls = {},
-                  vectorise = {},
-                  query = {
-                    max_num = { chunk = -1, document = -1 },
-                    default_num = { chunk = 50, document = 10 },
-                    include_stderr = false,
-                    use_lsp = false,
-                    no_duplicate = true,
-                    chunk_mode = false,
-                    summarise = {
-                      ---@type boolean|(fun(chat: CodeCompanion.Chat, results: VectorCode.QueryResult[]):boolean)|nil
-                      enabled = false,
-                      adapter = nil,
-                      query_augmented = true,
-                    }
+      plugins = {
+        codecompanion = {
+          luaConfig.post = ''
+            extensions = {
+              vectorcode = {
+                opts = {
+                  tool_group = {
+                    enabled = true,
+                    extras = {},
+                    collapse = false,
                   },
-                  files_ls = {},
-                  files_rm = {}
-                }
+                  tool_opts = {
+                    ["*"] = {},
+                    ls = {},
+                    vectorise = {},
+                    query = {
+                      max_num = { chunk = -1, document = -1 },
+                      default_num = { chunk = 50, document = 10 },
+                      include_stderr = false,
+                      use_lsp = false,
+                      no_duplicate = true,
+                      chunk_mode = false,
+                      summarise = {
+                        ---@type boolean|(fun(chat: CodeCompanion.Chat, results: VectorCode.QueryResult[]):boolean)|nil
+                        enabled = false,
+                        adapter = nil,
+                        query_augmented = true,
+                      }
+                    },
+                    files_ls = {},
+                    files_rm = {}
+                  }
+                },
               },
-            },
-          }
-        '';
+            }
+          '';
+        };
       };
     };
   };

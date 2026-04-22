@@ -1,14 +1,10 @@
 {
-  plugins = {
-    lsp.servers = {
-      jsonls = {
-        enable = true;
+  lsp.servers = {
+    jsonls = {
+      enable = true;
+      config = {
         filetypes = ["json" "jsonc"];
       };
     };
-
-    # none-ls.sources.formatting = {
-    # };
   };
 }
-

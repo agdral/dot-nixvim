@@ -1,11 +1,10 @@
 {
+  lsp.servers = {
+    just.enable = true;
+  };
   plugins = {
-    # lsp.servers = {
-    # };
-
     none-ls.sources.formatting = {
       just.enable = true;
     };
   };
 }
-

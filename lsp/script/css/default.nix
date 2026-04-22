@@ -1,11 +1,10 @@
 {
+  lsp.servers = {
+    tailwind.enable = true;
+  };
   plugins = {
-    # lsp.servers = {
-    # };
-
     none-ls.sources.formatting = {
       rustywind.enable = true;
     };
   };
 }
-

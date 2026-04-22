@@ -1,16 +1,11 @@
 {
-  plugins = {
-    lsp.servers = {
-      rust_analyzer = {
-        enable = true;
+  lsp.servers = {
+    rust_analyzer = {
+      enable = true;
+      config = {
         installCargo = false;
         installRustc = false;
       };
     };
-
-    # none-ls.sources.formatting = {
-    # };
   };
 }
-
-
