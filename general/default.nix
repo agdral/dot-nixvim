@@ -5,7 +5,9 @@
 }: {
   programs.nixvim = {
     enable = lib.mkDefault true;
-    globals.deprecation_warnings = false;
+    extraConfigLua = ''
+      vim.deprecate = function() end
+    '';
     imports = [
       ./config.nix
       ./sets.nix
