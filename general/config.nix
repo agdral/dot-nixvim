@@ -4,7 +4,6 @@
     number = true;
     conceallevel = 2;
     relativenumber = true;
-    autochdir = false;
     guifont = "JetBrainsMono Nerd Font:h12";
 
     # Set tabs to 2 spaces
@@ -33,7 +32,7 @@
     grepformat = "%f:%l:%c:%m";
 
     # Decrease updatetime
-    updatetime = 200; # faster completion (4000ms default)
+    updatetime = 200; 
 
     # Enable persistent undo history
     swapfile = false;
@@ -47,18 +46,13 @@
     cursorline = true; 
 
     # Set fold settings
-    foldcolumn = "0";
     foldlevel = 99;
     foldlevelstart = 99;
     foldenable = true;
 
     # Reduce which-key timeout to 10ms
     timeoutlen = 10;
-
-    # Set encoding type
-    encoding = "utf-8";
-    fileencoding = "utf-8";
-    
+ 
     # hide modes 
     cmdheight = 0;
     showmode = false;

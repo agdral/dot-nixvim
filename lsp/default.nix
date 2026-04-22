@@ -6,7 +6,6 @@
     imports = [
       (import-tree ./lang)
       (import-tree ./script)
-      (import-tree ./tool)
     ];
 
     plugins = {
