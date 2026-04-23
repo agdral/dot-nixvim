@@ -1,6 +1,9 @@
-{
+{pkgs-stable, ...}: {
   lsp.servers = {
-    csharp_ls.enable = true;
+    csharp_ls = {
+      enable = true;
+      package = pkgs-stable.csharp-ls;
+    };
   };
 
   plugins = {

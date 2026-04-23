@@ -1,6 +1,7 @@
 {
   lib,
   import-tree,
+  pkgs-stable,
   ...
 }: {
   programs.nixvim = {
@@ -8,6 +9,7 @@
     extraConfigLua = ''
       vim.deprecate = function() end
     '';
+    _module.args = {inherit pkgs-stable;};
     imports = [
       ./config.nix
       ./sets.nix

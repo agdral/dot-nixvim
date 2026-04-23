@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixstable.url = "https://flakehub.com/f/NixOS/nixpkgs/*";
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -12,12 +13,11 @@
 
   outputs = inputs @ {
     self,
-    nixpkgs,
     import-tree,
     nixvim,
     ...
   }: let
-    lib = nixpkgs.lib;
+    lib = inputs.nixpkgs.lib;
   in {
     nixosModules.default = {
       _module.args = {inherit import-tree;};

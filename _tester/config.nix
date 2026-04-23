@@ -1,12 +1,19 @@
 {
   self,
   lib,
+  inputs,
   ...
 }: let
   system = "x86_64-linux";
+  pkgs-stable = import inputs.nixstable {
+    inherit system;
+    config.allowUnfree = true;
+  };
 in {
   tester = lib.nixosSystem {
     inherit system;
+    specialArgs = {inherit pkgs-stable;};
+
     modules = [
       {
         nixpkgs.config.allowUnfree = true;
