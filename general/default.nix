@@ -5,6 +5,11 @@
   ...
 }: {
   programs.nixvim = {
+    nixpkgs = {
+      config = {
+        allowUnfree = true;
+      };
+    };
     enable = lib.mkDefault true;
     extraConfigLua = ''
       vim.deprecate = function() end
