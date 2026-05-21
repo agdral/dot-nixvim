@@ -3,14 +3,12 @@
     apps = true;
     autoSave = true;
     cmp = true;
-    codeCompanion = true;
     git = true;
     luasnip = true;
     minuet = true;
     noneLs = true;
     oil = true;
     trouble = true;
-    vectorCode = false;
   };
 
   nvim_ui = {

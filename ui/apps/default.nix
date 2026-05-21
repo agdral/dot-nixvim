@@ -11,7 +11,7 @@ in {
     programs.nixvim.plugins = {
       which-key.enable = true;
       indent-blankline.enable = true;
-      markdown-preview.enable = true;
+      plugins.image.enable = true;   
     };
   };
 }

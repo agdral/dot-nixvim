@@ -7,4 +7,9 @@
       golines.enable = true;
     };
   };
+  filetype = {
+    extension = {
+      gotmpl = "gotmpl";
+    };
+  };
 }
