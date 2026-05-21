@@ -11,7 +11,8 @@ in {
     programs.nixvim.plugins = {
       which-key.enable = true;
       indent-blankline.enable = true;
-      image.enable = true;   
+      # image.enable = true;   
+      nvim-ufo.enable = true;
     };
   };
 }
