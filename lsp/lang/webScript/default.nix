@@ -1,10 +1,6 @@
 {
   lsp.servers = {
-    biome = {
-      enable = true;
-      config = {
-        filetypes = ["javascript" "javascriptreact" "typescript" "typescript.tsx" "typescriptreact" "graphql"];
-      };
-    };
+    oxfmt.enable = true;
+    oxlint.enable = true;
   };
 }
