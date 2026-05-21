@@ -1,7 +1,8 @@
-{
+{pkgs, ...}: {
   plugins.lsp.servers.tailwindcss = {
     # se debe instalar en el proyecto: npm install @tailwindcss/language-server
     enable = true;
+    package = pkgs.tailwindcss-language-server;
 
     filetypes = [
       "html"
