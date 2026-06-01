@@ -29,7 +29,7 @@ in {
           };
         };
         window = {
-          width = 25;
+          width = 28;
           height = 15;
           auto_expand_width = false;
           mappings = {
