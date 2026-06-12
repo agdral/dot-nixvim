@@ -9,7 +9,7 @@ in {
   options.nvim_plugins.codeCompanion = mkEnableOption "Code Companion";
   config = mkIf cfg.codeCompanion {
     programs.nixvim.plugins = {
-      codeCompanion = {
+      codecompanion = {
         enable = true;
         settings = {
           adapters.http.deepseek = {
