@@ -24,10 +24,7 @@ in {
           '';
         };
         opts = {
-          log_level = "TRACE";
-          send_code = true;
-          use_default_actions = true;
-          use_default_prompts = true;
+          log_level = "DEBUG";
         };
         interactions = {
           agent = {

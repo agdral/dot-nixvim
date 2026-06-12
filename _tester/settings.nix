@@ -9,6 +9,7 @@
     noneLs = true;
     oil = true;
     trouble = true;
+    codeCompanion = true;
   };
 
   nvim_ui = {
