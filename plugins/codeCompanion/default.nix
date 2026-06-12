@@ -5,10 +5,9 @@
 }:
 with lib; let
   cfg = config.nvim_plugins;
-  name = "codeCompanion";
 in {
-  options.nvim_plugins.${name} = mkEnableOption "${name}";
-  config = mkIf cfg.${name} {
+  options.nvim_plugins.codeCompanion = mkEnableOption "Code Companion";
+  config = mkIf cfg.codeCompanion {
     programs.nixvim.plugins = {
       codeCompanion = {
         enable = true;
