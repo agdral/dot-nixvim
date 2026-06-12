@@ -5,6 +5,7 @@
   ...
 }: {
   programs.nixvim = {
+    version.enableNixpkgsReleaseCheck = false;
     nixpkgs = {
       config = {
         allowUnfree = true;
