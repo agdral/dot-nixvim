@@ -4,10 +4,7 @@
   inputs = {
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
     nixstable.url = "https://flakehub.com/f/NixOS/nixpkgs/*";
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixvim.url = "github:nix-community/nixvim";
     import-tree.url = "github:vic/import-tree";
   };
 
