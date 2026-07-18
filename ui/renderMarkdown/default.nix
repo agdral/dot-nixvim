@@ -11,9 +11,6 @@ in {
     programs.nixvim.plugins = {
       render-markdown = {
         enable = true;
-        settings = {
-          latex.enabled = false;
-        };
         luaConfig.post = ''
           require('render-markdown').setup({
             file_types = { 'markdown', 'codecompanion' },
