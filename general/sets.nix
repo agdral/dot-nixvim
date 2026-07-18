@@ -1,8 +1,8 @@
 {
   colorschemes = {
-    rose-pine = {
+    tokyonight = {
       enable = true;
-      settings.variant = "main";
+      settings.style = "night";
     };
   };
 
